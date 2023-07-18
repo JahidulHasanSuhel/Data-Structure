@@ -1,3 +1,7 @@
+/*
+Queue implementation with Array
+Code written by Suhel.
+*/
 #include <bits/stdc++.h>
 using namespace std;
  
