@@ -1,4 +1,7 @@
-
+/*
+Stack implementation with Array
+Code written by suhel.
+*/
 #include<bits/stdc++.h>
 #include<conio.h>
 #include<stack>
