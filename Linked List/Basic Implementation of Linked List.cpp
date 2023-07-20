@@ -1,5 +1,5 @@
 /*
-Stack implementation with Array
+Linked List implementation.
 Code written by Suhel.
 */
 #include<bits/stdc++.h>
