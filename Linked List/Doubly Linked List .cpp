@@ -1,3 +1,7 @@
+/*
+Doubly Linked List implementation
+Code written by Suhel.
+*/
 #include<bits/stdc++.h>
 #include<conio.h>
 using namespace std;
