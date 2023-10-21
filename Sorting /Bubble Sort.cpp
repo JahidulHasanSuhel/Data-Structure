@@ -1,3 +1,7 @@
+/*
+Bubble sort implementation
+Code written by suhel.
+*/
 #include<bits/stdc++.h>
 #include<conio.h>
 using namespace std;
