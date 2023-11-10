@@ -1,0 +1,88 @@
+/*
+Heap implementation.
+Code written by Suhel.
+*/
+#include<bits/stdc++.h>
+#include<conio.h>
+using namespace std;
+class heap{
+    public:
+    int arr[100];
+    int size;
+
+    heap(){
+        arr[0] = -1;
+        size = 0;
+    }
+
+    void insert(int val){
+        size = size + 1;
+        int i = size;
+        arr[i] = val;
+
+        while(i > 1){
+            int parent = i / 2;
+            if(arr[parent] < arr[i]){
+                swap(arr[parent], arr[i]);
+            }
+            else return;
+        }
+    }
+
+    void print(){
+        for(int i = 0; i<=size; i++){
+            cout<<arr[i] <<" ";
+        }
+        cout<<endl;
+    }
+void DeleteFromHeap(){
+        if(size==0){
+            cout << "Heap is already empty"<<endl;
+            return;
+        }
+        
+        arr[1] = arr[size];
+        arr[size] = -1;
+        size--;
+        
+        int i = 1;
+        while(i <= size){
+            int leftindex = 2*i;
+            int rightindex = 2*i + 1;
+            
+            int temp=i;
+            if(leftindex<= size && arr[temp]<arr[leftindex]){
+                temp = leftindex;
+            }
+            
+            if(rightindex<=size && arr[temp]<arr[rightindex]){
+                temp = rightindex;
+            }
+            
+            if(arr[temp]>arr[i]){
+                swap(arr[temp],arr[i]);
+                i = temp;
+            }
+            else{
+                return;
+            }
+        }
+    }
+};
+
+int main(){
+system("cls");
+  heap h;
+  h.insert(50);
+  h.insert(55);
+  h.insert(53);
+  h.insert(52);
+  h.insert(54);
+  h.print();
+
+  h.DeleteFromHeap();
+  h.print();
+
+  getch();
+  return 0;
+}
