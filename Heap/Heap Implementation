@@ -17,13 +17,13 @@ class heap{
 
     void insert(int val){
         size = size + 1;
-        int i = size;
-        arr[i] = val;
+        int index = size;
+        arr[index] = val;
 
         while(i > 1){
             int parent = i / 2;
-            if(arr[parent] < arr[i]){
-                swap(arr[parent], arr[i]);
+            if(arr[parent] < arr[index]){
+                swap(arr[parent], arr[index]);
             }
             else return;
         }
