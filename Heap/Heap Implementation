@@ -20,10 +20,11 @@ class heap{
         int index = size;
         arr[index] = val;
 
-        while(i > 1){
-            int parent = i / 2;
+        while(index > 1){
+            int parent = index / 2;
             if(arr[parent] < arr[index]){
                 swap(arr[parent], arr[index]);
+                   index = parent;
             }
             else return;
         }
